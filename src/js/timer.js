@@ -68,6 +68,9 @@ function pauseTimer() {
 }
 
 function resetTimer() {
+  if(localStorage.getItem('time') != null) {
+    isTimeSet = true;
+  }
   let confirmarReset = confirm('RESETAR TEMPO?');
   if (confirmarReset) {
     clearInterval(timer);
